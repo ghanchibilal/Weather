@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoDataView" customModule="Weather" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAddCity" destination="gOK-0E-XI5" id="KC9-iB-uqg"/>
+                <outlet property="containerView" destination="ZYC-jI-dmV" id="JDM-Gl-Mif"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZYC-jI-dmV">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEh-hl-f33">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoDataImage" translatesAutoresizingMaskIntoConstraints="NO" id="cMg-zi-6fb">
+                            <rect key="frame" x="65" y="65" width="195" height="130"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="cMg-zi-6fb" secondAttribute="height" multiplier="3:2" id="cD2-eV-uqv"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOK-0E-XI5">
+                            <rect key="frame" x="81.5" y="215" width="162.5" height="50"/>
+                            <color key="backgroundColor" name="themeColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Fhp-Nw-6Dt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                            <state key="normal" title="Add Location">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="uOO-q5-sWB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="gOK-0E-XI5" firstAttribute="width" secondItem="dEh-hl-f33" secondAttribute="width" multiplier="0.5" id="4Ak-xa-9aa"/>
+                        <constraint firstItem="cMg-zi-6fb" firstAttribute="centerX" secondItem="dEh-hl-f33" secondAttribute="centerX" id="H7z-62-IUu"/>
+                        <constraint firstItem="gOK-0E-XI5" firstAttribute="top" secondItem="cMg-zi-6fb" secondAttribute="bottom" constant="20" id="QIt-X1-RMW"/>
+                        <constraint firstItem="gOK-0E-XI5" firstAttribute="centerX" secondItem="dEh-hl-f33" secondAttribute="centerX" id="TD0-qK-kqv"/>
+                        <constraint firstItem="cMg-zi-6fb" firstAttribute="centerY" secondItem="dEh-hl-f33" secondAttribute="centerY" constant="-20" id="etW-ir-QUQ"/>
+                        <constraint firstItem="cMg-zi-6fb" firstAttribute="width" secondItem="dEh-hl-f33" secondAttribute="width" multiplier="0.6" id="qeF-fA-QYm"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.29999999999999999"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.47849911103393827" green="0.47849911103393827" blue="0.47849911103393827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="dgC-yw-MTL"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="CheckRoundedView">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="dEh-hl-f33" firstAttribute="trailing" secondItem="dgC-yw-MTL" secondAttribute="trailing" id="4UV-JY-lDz"/>
+                <constraint firstItem="dEh-hl-f33" firstAttribute="top" secondItem="ZYC-jI-dmV" secondAttribute="top" id="L85-og-IBz"/>
+                <constraint firstItem="dEh-hl-f33" firstAttribute="leading" secondItem="dgC-yw-MTL" secondAttribute="leading" id="ZAz-uI-4JV"/>
+                <constraint firstAttribute="bottom" secondItem="dEh-hl-f33" secondAttribute="bottom" id="a1d-Hb-wfi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="93.478260869565219" y="67.633928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NoDataImage" width="480" height="374"/>
+        <namedColor name="themeColor">
+            <color red="0.035000000149011612" green="0.289000004529953" blue="0.69300001859664917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
