@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ForecastCollectionViewCell" id="6Be-0r-v3n" customClass="ForecastCollectionViewCell" customModule="Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="169"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="225" height="169"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MtV-yt-3wz" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="169"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g7g-YO-Dhf">
+                                <rect key="frame" x="78.5" y="15" width="68" height="67.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g7g-YO-Dhf" secondAttribute="height" multiplier="1:1" id="D2c-pO-jQ2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-6o-12Q">
+                                <rect key="frame" x="90.5" y="92.5" width="44.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g7g-YO-Dhf" firstAttribute="centerX" secondItem="MtV-yt-3wz" secondAttribute="centerX" id="37t-xA-MIW"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IBb-6o-12Q" secondAttribute="trailing" constant="5" id="3QI-3y-J9f"/>
+                            <constraint firstItem="IBb-6o-12Q" firstAttribute="centerX" secondItem="MtV-yt-3wz" secondAttribute="centerX" id="5gk-Oa-QRb"/>
+                            <constraint firstItem="IBb-6o-12Q" firstAttribute="top" secondItem="g7g-YO-Dhf" secondAttribute="bottom" constant="10" id="EoM-6b-hVl"/>
+                            <constraint firstItem="IBb-6o-12Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MtV-yt-3wz" secondAttribute="leading" constant="5" id="G0l-nC-DqM"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IBb-6o-12Q" secondAttribute="bottom" constant="5" id="I0u-cq-Qsg"/>
+                            <constraint firstItem="g7g-YO-Dhf" firstAttribute="height" secondItem="MtV-yt-3wz" secondAttribute="height" multiplier="0.4" id="Ml7-a4-q4o"/>
+                            <constraint firstItem="g7g-YO-Dhf" firstAttribute="top" secondItem="MtV-yt-3wz" secondAttribute="top" constant="15" id="xSe-H1-H94"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="Yfx-Yf-hjd"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="MtV-yt-3wz" secondAttribute="bottom" id="7iX-6D-8qd"/>
+                <constraint firstAttribute="trailing" secondItem="MtV-yt-3wz" secondAttribute="trailing" id="Qg3-ud-Zg7"/>
+                <constraint firstItem="MtV-yt-3wz" firstAttribute="top" secondItem="6Be-0r-v3n" secondAttribute="top" id="iD7-sj-rbB"/>
+                <constraint firstItem="MtV-yt-3wz" firstAttribute="leading" secondItem="6Be-0r-v3n" secondAttribute="leading" id="zWh-3f-WWl"/>
+            </constraints>
+            <size key="customSize" width="143" height="103"/>
+            <connections>
+                <outlet property="forecastImg" destination="g7g-YO-Dhf" id="i4B-lW-CXv"/>
+                <outlet property="lblInfo" destination="IBb-6o-12Q" id="K4S-CG-haH"/>
+            </connections>
+            <point key="canvasLocation" x="112.31884057971016" y="45.870535714285715"/>
+        </collectionViewCell>
+    </objects>
+</document>
